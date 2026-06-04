@@ -1,0 +1,9 @@
+{
+  // Static site served by Cloudflare Workers static assets.
+  // No Worker script — just uploads ./ as the site root (index.html at /).
+  "name": "personal-site",
+  "compatibility_date": "2025-06-01",
+  "assets": {
+    "directory": "./"
+  }
+}
