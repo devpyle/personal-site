@@ -255,14 +255,15 @@
             <span class="proj-kind is-private">Trading system · private</span>
             <span class="proj-name">Polymarket trading bot</span>
             <p class="proj-desc">
-              An automated trading system for prediction markets. Market-making and directional
-              bots backed by a real-time data pipeline, a Go execution gate, and Postgres and
+              An automated trading system for prediction markets, built as a polyglot
+              low-latency stack: a Rust execution engine, Go services and a risk and order
+              gate, a TypeScript data bus, and Python for research and bots, over Postgres and
               parquet storage. On the research side I do quantitative signal discovery and train
-              machine-learning models on microstructure features, then validate and promote them
-              through a shadow-to-live pipeline supervised across cloud and local servers.
+              machine-learning models on microstructure features, validated and promoted
+              shadow-to-live across cloud and local servers.
             </p>
             <ul class="proj-tags">
-              <li>Python</li><li>Go</li><li>machine learning</li><li>model training</li><li>quant research</li><li>real-time systems</li>
+              <li>Rust</li><li>Go</li><li>TypeScript</li><li>Python</li><li>machine learning</li><li>quant research</li>
             </ul>
           </article>
 
