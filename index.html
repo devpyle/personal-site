@@ -198,11 +198,21 @@
     <section id="work" class="section">
       <div class="container">
         <h2 class="section-title"><span class="section-num">03</span> Selected work</h2>
-        <p class="prose" style="margin-bottom:2.5rem;">
+        <p class="prose" style="margin-bottom:2rem;">
           Things I've designed and built end to end, outside of day-job work. I scope them,
           write the code, and run them in production. They're how I keep my hands on the
           technical reality my product decisions depend on.
         </p>
+
+        <div class="ai-note reveal">
+          <span class="ai-note-label">AI in practice</span>
+          <ul>
+            <li><strong>LLM pipelines in production</strong> — prompt design, chunked batching, JSON-validated output, versioned classifiers (printrate.io).</li>
+            <li><strong>AI-driven evaluation and generation</strong> — rating, fit analysis, and tailored documents on the Claude API (Job Radar).</li>
+            <li><strong>Machine-learning models</strong> I trained, validated, and promoted shadow-to-live on real money (Polymarket).</li>
+            <li><strong>Build with AI coding agents daily</strong> — Claude Code is part of my workflow, including this site.</li>
+          </ul>
+        </div>
 
         <div class="work-grid">
 
@@ -213,13 +223,14 @@
             </a>
             <p class="proj-desc">
               A scorecard that grades stock-picking accounts on what they actually return.
-              It ingests a list of finance influencers, classifies every ticker call with an
-              LLM, and scores each account's forward performance against its sector benchmark.
-              Empirical-Bayes shrinkage and false-discovery-rate correction keep the rankings
-              statistically honest instead of vibes, with a live explorer that updates each hour.
+              The engine is an LLM classification pipeline I built: it reads every
+              finance-influencer post, extracts the real ticker call with a tuned prompt,
+              validates the JSON, and versions the classifier so results stay reproducible.
+              Forward returns are then scored against each sector benchmark, with empirical-Bayes
+              shrinkage and false-discovery-rate correction so the rankings are honest, not vibes.
             </p>
             <ul class="proj-tags">
-              <li>Python</li><li>LLM classification</li><li>pandas / parquet</li><li>statistical modeling</li><li>systemd</li>
+              <li>Python</li><li>LLM pipeline</li><li>prompt engineering</li><li>pandas / parquet</li><li>statistical modeling</li>
             </ul>
           </article>
 
@@ -229,14 +240,14 @@
               Job Radar <span class="ext">↗</span>
             </a>
             <p class="proj-desc">
-              The AI-powered job search engine I built to run my own search. It queries 13+
-              job APIs and ATS platforms twice a day, rates every posting with Claude, dedupes
-              across runs, and tracks everything through a Kanban dashboard with fit analysis,
-              an interview-story bank, and tailored resume and cover-letter generation. This
-              site is generated from its profile data.
+              The AI job-search engine I built to run my own search. It queries 13+ job APIs
+              and ATS platforms twice a day, then uses an LLM to read and rate every posting,
+              run a fit analysis against my background, and generate tailored resumes and cover
+              letters, all tracked on a Kanban board. Built with Claude Code, and this very
+              site is generated from its data.
             </p>
             <ul class="proj-tags">
-              <li>Python</li><li>Flask</li><li>Claude API</li><li>web scraping</li><li>cron</li>
+              <li>Python</li><li>Flask</li><li>Claude API</li><li>LLM evaluation</li><li>web scraping</li>
             </ul>
           </article>
 
@@ -246,12 +257,12 @@
             <p class="proj-desc">
               An automated trading system for prediction markets. Market-making and directional
               bots backed by a real-time data pipeline, a Go execution gate, and Postgres and
-              parquet storage. The research side covers quantitative signal discovery,
-              microstructure features, and machine-learning models trained and validated through
-              a shadow-to-live promotion pipeline, supervised across cloud and local servers.
+              parquet storage. On the research side I do quantitative signal discovery and train
+              machine-learning models on microstructure features, then validate and promote them
+              through a shadow-to-live pipeline supervised across cloud and local servers.
             </p>
             <ul class="proj-tags">
-              <li>Python</li><li>Go</li><li>PostgreSQL</li><li>machine learning</li><li>quant research</li><li>real-time systems</li>
+              <li>Python</li><li>Go</li><li>machine learning</li><li>model training</li><li>quant research</li><li>real-time systems</li>
             </ul>
           </article>
 

@@ -505,6 +505,58 @@ a.proj-name .ext {
   border-radius: 100px;
 }
 
+/* ---------- AI-in-practice strip ---------- */
+.ai-note {
+  margin: 0 0 2.6rem;
+  padding: 1.5rem 1.7rem;
+  background: var(--accent-soft);
+  border: 1px solid color-mix(in srgb, var(--accent) 24%, var(--line));
+  border-radius: var(--radius);
+}
+.ai-note-label {
+  font-family: var(--mono);
+  font-size: 0.72rem;
+  font-weight: 500;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+  color: var(--accent);
+  display: flex;
+  align-items: center;
+  gap: 0.55rem;
+  margin-bottom: 1.1rem;
+}
+.ai-note-label::before {
+  content: "";
+  width: 7px; height: 7px;
+  border-radius: 50%;
+  background: var(--accent);
+}
+.ai-note ul {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.75rem 2rem;
+}
+.ai-note li {
+  position: relative;
+  padding-left: 1.4rem;
+  font-size: 0.96rem;
+  color: var(--ink-soft);
+  line-height: 1.45;
+}
+.ai-note li::before {
+  content: "→";
+  position: absolute;
+  left: 0;
+  top: 0.05rem;
+  color: var(--accent);
+  font-family: var(--mono);
+  font-size: 0.82rem;
+}
+.ai-note li strong { color: var(--ink); font-weight: 600; }
+@media (max-width: 640px) {
+  .ai-note ul { grid-template-columns: 1fr; }
+}
+
 /* ---------- education ---------- */
 .edu {
   padding: 1.6rem 0;
