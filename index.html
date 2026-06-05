@@ -214,25 +214,32 @@
           </ul>
         </div>
 
-        <div class="work-grid">
-
-          <article class="proj reveal">
-            <span class="proj-kind">Live web app</span>
+        <article class="proj proj-featured reveal">
+          <div class="proj-featured-meta">
+            <span class="proj-kind">Live web app · flagship</span>
             <a href="https://printrate.io" class="proj-name" target="_blank" rel="noopener">
               printrate.io <span class="ext">↗</span>
             </a>
-            <p class="proj-desc">
-              A scorecard that grades stock-picking accounts on what they actually return.
-              The engine is an LLM classification pipeline I built: it reads every
-              finance-influencer post, extracts the real ticker call with a tuned prompt,
-              validates the JSON, and versions the classifier so results stay reproducible.
-              Forward returns are then scored against each sector benchmark, with empirical-Bayes
-              shrinkage and false-discovery-rate correction so the rankings are honest, not vibes.
-            </p>
             <ul class="proj-tags">
               <li>Python</li><li>LLM pipeline</li><li>prompt engineering</li><li>pandas / parquet</li><li>statistical modeling</li>
             </ul>
-          </article>
+          </div>
+          <div class="proj-featured-body">
+            <p class="proj-desc">
+              Finance social media is full of confident stock picks and no accountability — nobody
+              tracks whether the loudest accounts are actually right. I built a product that grades
+              stock-picking accounts on their realized returns, turning “trust me” into a measurable
+              track record. I owned it end to end: defined the problem, scoped the build, and shipped
+              a live product that ingests influencer posts, classifies each real call with an LLM
+              pipeline, and scores it against the market. The hardest product decision was discipline
+              over flash — it withholds a verdict until the data clears a real statistical bar, so
+              users get an honest signal instead of false confidence. Built and run solo, which meant
+              owning every call from data integrity to what we don't ship.
+            </p>
+          </div>
+        </article>
+
+        <div class="work-grid">
 
           <article class="proj reveal">
             <span class="proj-kind">Open source</span>

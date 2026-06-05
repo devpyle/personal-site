@@ -505,6 +505,31 @@ a.proj-name .ext {
   border-radius: 100px;
 }
 
+/* ---------- featured project (flagship) ---------- */
+.proj-featured {
+  display: grid;
+  grid-template-columns: 0.78fr 2fr;
+  gap: 2.6rem;
+  align-items: start;
+  margin-bottom: 1.4rem;
+}
+.proj-featured-meta {
+  display: flex;
+  flex-direction: column;
+  gap: 0.9rem;
+}
+.proj-featured-meta .proj-name { font-size: 1.6rem; margin: 0; }
+.proj-featured-meta .proj-tags { margin-top: 0.15rem; }
+.proj-featured .proj-desc {
+  margin: 0;
+  font-size: 1.04rem;
+  line-height: 1.68;
+  flex: none;
+}
+@media (max-width: 720px) {
+  .proj-featured { grid-template-columns: 1fr; gap: 1.1rem; }
+}
+
 /* ---------- AI-in-practice strip ---------- */
 .ai-note {
   margin: 0 0 2.6rem;
