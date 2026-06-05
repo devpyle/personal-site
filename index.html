@@ -239,13 +239,38 @@
           </div>
         </article>
 
-        <div class="work-grid">
+        <article class="proj proj-featured reveal">
+          <div class="proj-featured-meta">
+            <span class="proj-kind is-private">Trading system · private</span>
+            <span class="proj-name">Polymarket trading bot</span>
+            <ul class="proj-tags">
+              <li>Rust</li><li>Go</li><li>TypeScript</li><li>Python</li><li>machine learning</li><li>quant research</li>
+            </ul>
+          </div>
+          <div class="proj-featured-body">
+            <p class="proj-desc">
+              Built an automated system that takes real positions in prediction markets on its
+              own, and owned it end to end. The core product principle was discipline over speed:
+              every strategy runs through a risk-and-order gate and has to prove itself
+              shadow-to-live against real market data before it can risk a dollar. Under the hood,
+              a polyglot low-latency stack — Rust execution, Go services, a TypeScript data bus,
+              Python research — where I discover quantitative signals and train ML models on
+              market-microstructure features, then promote them across cloud and local infrastructure.
+            </p>
+          </div>
+        </article>
 
-          <article class="proj reveal">
+        <article class="proj proj-featured reveal">
+          <div class="proj-featured-meta">
             <span class="proj-kind">Open source</span>
             <a href="https://github.com/devpyle/job-search-profile" class="proj-name" target="_blank" rel="noopener">
               Job Radar <span class="ext">↗</span>
             </a>
+            <ul class="proj-tags">
+              <li>Python</li><li>Flask</li><li>Claude API</li><li>LLM evaluation</li><li>web scraping</li>
+            </ul>
+          </div>
+          <div class="proj-featured-body">
             <p class="proj-desc">
               The AI job-search engine I built to run my own search. It queries 13+ job APIs
               and ATS platforms twice a day, then uses an LLM to read and rate every posting,
@@ -253,28 +278,8 @@
               letters, all tracked on a Kanban board. Built with Claude Code, and this very
               site is generated from its data.
             </p>
-            <ul class="proj-tags">
-              <li>Python</li><li>Flask</li><li>Claude API</li><li>LLM evaluation</li><li>web scraping</li>
-            </ul>
-          </article>
-
-          <article class="proj reveal">
-            <span class="proj-kind is-private">Trading system · private</span>
-            <span class="proj-name">Polymarket trading bot</span>
-            <p class="proj-desc">
-              An automated trading system for prediction markets, built as a polyglot
-              low-latency stack: a Rust execution engine, Go services and a risk and order
-              gate, a TypeScript data bus, and Python for research and bots, over Postgres and
-              parquet storage. On the research side I do quantitative signal discovery and train
-              machine-learning models on microstructure features, validated and promoted
-              shadow-to-live across cloud and local servers.
-            </p>
-            <ul class="proj-tags">
-              <li>Rust</li><li>Go</li><li>TypeScript</li><li>Python</li><li>machine learning</li><li>quant research</li>
-            </ul>
-          </article>
-
-        </div>
+          </div>
+        </article>
       </div>
     </section>
 
